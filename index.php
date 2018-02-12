@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+session_start();
+include './GenerateHTML.php';
+echo '<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -7,11 +10,8 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script type="text/javascript" language="javascript" src="js/ajaxSubmit.js"></script>
     </head>
-    <body id="results">
-        <?php
-        session_start();
-        include './GenerateHTML.php';
-        homePage();
-        ?>
-    </body>
-</html>
+    <body id="results">',
+        homePage(),
+    '</body>
+</html>'
+?>

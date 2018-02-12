@@ -25,7 +25,6 @@ class Users {
     }
 
     public static function addUser($user) {
-        echo count(Users::getUsers());
         include_once './User.php';
         $u = new Users();
         if (file_exists($u->filepath)) {
